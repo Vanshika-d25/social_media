@@ -15,7 +15,7 @@ export default function FileUpload({ setResult }) {
       const formData = new FormData();
       formData.append("file", file);
 
-      const uploadRes = await fetch("http://localhost:5000/api/upload", {
+      const uploadRes = await fetch("https://social-media-lup1.onrender.com", {
         method: "POST",
         body: formData,
       });
