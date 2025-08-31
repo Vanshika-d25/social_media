@@ -23,8 +23,4 @@ It provides insights into engagement and trends through an interactive dashboard
 
 ---
 
-## Project Setup
 
-Clone the repository:
-```bash
-git clone https://github.com/your-username/social-media-analyser.git
