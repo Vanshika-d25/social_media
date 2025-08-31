@@ -11,11 +11,11 @@ export default function FileUpload({ setResult }) {
     }
 
     try {
-      // Step 1: Upload file → backend
+      // Step 1: Upload file → backend (Render)
       const formData = new FormData();
       formData.append("file", file);
 
-      const uploadRes = await fetch("https://social-media-lup1.onrender.com", {
+      const uploadRes = await fetch("https://social-media-lup1.onrender.com/api/upload", {
         method: "POST",
         body: formData,
       });
@@ -28,8 +28,8 @@ export default function FileUpload({ setResult }) {
         return;
       }
 
-      // Step 2: Analyze extracted text
-      const analyzeRes = await fetch("http://localhost:5000/api/analyze", {
+      // Step 2: Analyze extracted text → backend (Render)
+      const analyzeRes = await fetch("https://social-media-lup1.onrender.com/api/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
